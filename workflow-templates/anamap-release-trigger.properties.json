@@ -1,0 +1,6 @@
+{
+  "name": "Anamap Release Trigger",
+  "description": "Send deployment and release context to Anamap after a deploy.",
+  "iconName": "anamap-logo",
+  "categories": ["deployment", "automation"]
+}
