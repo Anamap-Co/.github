@@ -1,0 +1,15 @@
+name: Notify Anamap On Deploy
+
+on:
+  push:
+    branches: [$default-branch]
+  workflow_dispatch:
+
+jobs:
+  notify:
+    uses: alex-schlee/anamap-release-trigger/.github/workflows/notify-anamap.yml@v1
+    with:
+      company-id: ${{ vars.ANAMAP_COMPANY_ID }}
+      environment: prod
+    secrets:
+      trigger-token: ${{ secrets.ANAMAP_RELEASE_TRIGGER_TOKEN }}
